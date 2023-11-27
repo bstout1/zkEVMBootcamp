@@ -1,0 +1,178 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathrsfs, amscd, fancyheadings}
+\pagestyle{fancy}
+\usepackage[top=1in, left=1in, right=1in]{geometry}% http://ctan.org/pkg/geometry
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+
+\def\AA{{\mathbb A}}
+\def\BB{{\mathbb B}}
+\def\CC{{\mathbb C}}
+\def\FF{{\mathbb F}}
+\def\GG{{\mathbb G}}
+\def\KK{{\mathbb K}}
+\def\MM{{\mathbb M}}
+\def\NN{{\mathbb N}}
+\def\OO{{\mathbb O}}
+\def\QQ{{\mathbb Q}}
+\def\PP{{\mathbb P}}
+\def\QQ{{\mathbb Q}}
+\def\RR{{\mathbb R}}
+\def\TT{{\mathbb T}}
+\def\ZZ{{\mathbb Z}}
+
+\def\Asf{{\mathsf A}}
+\def\Bsf{{\mathsf B}}
+\def\Esf{{\mathsf E}}
+\def\Fsf{{\mathsf F}}
+\def\Psf{{\mathsf P}}
+\def\Ssf{{\mathsf S}}
+
+\def\hhat{{\hat h}}
+\def\Hhat{{\hat H}}
+
+\def\0{{\mathbf 0}}
+\def\1{{\mathbf 1}}
+\def\a{{\mathbf a}}
+\def\b{{\mathbf b}}
+\def\c{{\mathbf c}}
+\def\e{{\mathbf e}}
+\def\h{{\mathbf h}}
+\def\r{{\mathbf r}}
+\def\w{{\mathbf w}}
+\def\x{{\mathbf x}}
+\def\y{{\mathbf y}}
+\def\z{{\mathbf z}}
+\def\Abf{{\mathbf A}}
+\def\Bbf{{\mathbf B}}
+
+\def\Acal{{\mathcal A}}
+\def\Bcal{{\mathcal B}}
+\def\Ccal{{\mathcal C}}
+\def\Dcal{{\mathcal D}}
+\def\Ecal{{\mathcal E}}
+\def\Fcal{{\mathcal F}}
+\def\Gcal{{\mathcal G}}
+\def\Hcal{{\mathcal H}}
+\def\Ical{{\mathcal I}}
+\def\Jcal{{\mathcal J}}
+\def\Kcal{{\mathcal K}}
+\def\Lcal{{\mathcal L}}
+\def\Mcal{{\mathcal M}}
+\def\Ncal{{\mathcal N}}
+\def\Ocal{{\mathcal O}}
+\def\Pcal{{\mathcal P}}
+\def\Qcal{{\mathcal Q}}
+\def\Rcal{{\mathcal R}}
+\def\Scal{{\mathcal S}}
+\def\Tcal{{\mathcal T}}
+\def\Vcal{{\mathcal V}}
+\def\Xcal{{\mathcal X}}
+\def\Zcal{{\mathcal Z}}
+
+\def\pfrak{{\mathfrak p}}
+\def\Gfrak{{\mathfrak G }}
+\def\Rfrak{{\mathfrak R }}
+
+\def\Kbar{{\bar K}}
+\def\kbar{{\bar k}}
+\def\Fbar{{\bar F}}
+
+\def\arch{\mathrm{arch}}
+\def\Aut{\mathrm{Aut}}
+\def\ch{\mathrm{char}}
+\def\Cl{\mathrm{Cl}}
+\def\ker{\mathrm{Ker}}
+\def\Div{\mathrm{Div}}
+\def\diag{\mathrm{diag}}
+\def\Perm{\mathrm{Perm}}
+\def\diam{\mathrm{diam}}
+\def\disc{\mathrm{disc}}
+\def\sgn{\mathrm{sgn}}
+\def\grad{\mathrm{grad}}
+\def\div{\mathrm{div}}
+\def\Isom{\mathrm{Isom}}
+\def\ns{\mathrm{ns}}
+\def\ab{\mathrm{ab}}
+\def\s{\mathrm{s}}
+\def\Gal{\mathrm{Gal}}
+\def\Nor{\mathrm{Nor}}
+\def\Sym{\mathrm{Sym}}
+\def\sym{\mathrm{sym}}
+\def\Rat{\mathrm{Rat}}
+\def\Hom{\mathrm{Hom}}
+\def\Spec{\mathrm{Spec}}
+\def\Vol{\mathrm{Vol}}
+\def\PGL{\mathrm{PGL}}
+\def\GL{\mathrm{GL}}
+\def\tor{\mathrm{tor}}
+\def\Pic{\mathrm{Pic}}
+\def\PrePer{\mathrm{PrePer}}
+\def\Per{\mathrm{Per}}
+\def\Crit{\mathrm{Crit}}
+\def\Fix{\mathrm{Fix}}
+\def\ord{\mathrm{ord}}
+\def\ad{\mathrm{ad}}
+\def\Res{\mathrm{Res}}
+\def\Prep{\mathrm{Prep}}
+\def\trace{\mathrm{trace}}
+\def\norm{\mathrm{norm}}
+\def\Berk{\mathrm{Berk}}
+\def\supp{\mathrm{supp}}
+\def\st{\mathrm{st}}
+\def\im{\mathrm{Im}}
+\def\CS{\mathrm{CS}}
+\def\min{\mathrm{min}}
+
+\def\GLn{\mathrm{GL_n}}
+\def\Frac{\mathrm{Frac}}
+\def\uf{\mathrm{uf}}
+\def\uc{\mathrm{uc}}
+\def\Tw{\mathrm{Twist}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{prb}{Problem}
+\newtheorem{conj}{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{dfn}{Definition}
+\newtheorem*{thmdfn}{Theorem/Definition}
+\newtheorem*{dfns}{Definitions}
+\newtheorem*{rem}{Remark}
+\newtheorem{ex}{Example}
+
+\begin{document}
+
+\title{zkSync / zkEVM Bootcamp: Day 4 Problem Set}
+\author{Brian Justin Stout\footnote{email: bjstout@proton.me}}
+\maketitle
+
+\begin{prb}\label{P1}
+Working with the following set of integers $S=\{ 0,1,2,3,4,5,6\}$, compute the following: $4+4$, $3*5$, $3^{-1}$
+\end{prb}
+
+$S$ is the finite field of seven elements, or $\FF_7$. Therefore $4+4=8=1\textrm{ (mod 7)}$, $3*5=15=1\textrm{ (mod 7)}$ which also shows that $3^{-1}=5\textrm{ (mod 7)}$.
+
+\begin{prb}\label{P2}
+For $S=\{ 0,1,2,3,4,5,6\}$ can we consider $S$ and the operationg $+$ to be a group?
+\end{prb}
+
+Yes, because $S=\FF_7$ we know that $S$ is a group under addition and the non-zero elements form a group under multiplication.
+
+\begin{prb}\label{P3}
+What is $-13\textrm{ (mod 5)}$?
+\end{prb}
+Adding multiples of the modulus we obtain $-13 = -13 + 15 = 2\textrm{ (mod 5)}$.
+
+\begin{prb}\label{P4}
+For the polynomial $p(x)=x^3-x^2+4x-12$ find the positive root $a$. What is the degree of this polynomial?
+\end{prb}
+
+The degree of the polynomial is $3$, the largest power of $x$. A positive root for this polynomial is $x=2$ because $2^3-2^2+4*2-12=8-4+8-12=0$. Therefore the polynomial factors as $(x-2)(x^2+x+6)$.
+
+
+\end{document}
